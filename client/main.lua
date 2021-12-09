@@ -217,10 +217,11 @@ Citizen.CreateThread(function()
                                             GarbageVehicle = veh
                                             SetVehicleNumberPlateText(veh, "GARB"..tostring(math.random(1000, 9999)))
                                             SetEntityHeading(veh, coords.h)
-                                            exports['lj-fuel']:SetFuelLevel(veh, GetVehicleNumberPlateText(veh), 100, false)
+                                            SetVehicleNumberPlateText(veh, "TRASH"..tostring(math.random(1000, 9999)))
+                                            exports['lj-fuel']:SetFuel(veh, 100.0)
                                             TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
                                             SetEntityAsMissionEntity(veh, true, true)
-                                            exports['qb-vehiclekeys']:SetVehicleKey(GetVehicleNumberPlateText(veh), true)
+                                            TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(veh))
                                             SetVehicleEngineOn(veh, true, true)
                                             hasVuilniswagen = true
                                             GarbageLocation = 1
