@@ -1,11 +1,16 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'QB-GarbageJob V2'
-version '2.0.0'
+author 'Kallock - The Goodlife RP Server'
+version '1.0.0'
 
-shared_script 'config.lua'
-client_script 'client/main.lua'
-server_script 'server/main.lua'
+shared_script 'shared.lua'
+client_script 'client.lua'
+server_script 'server.lua'
+
+dependencies {
+    'qb-target',
+    'qb-input'
+}
 
 lua54 'yes'
