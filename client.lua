@@ -87,13 +87,13 @@ end)
 
 -- Spawn Boss NPC
 RegisterNetEvent('gl-garbage:spawnNPC',function(coords,heading)
-    local hash = `s_m_y_garbage`
-    NPC = CreatePed(5, hash, coords, heading, false, false)
-    FreezeEntityPosition(NPC, true)
-    SetEntityInvincible(NPC, true)
-    SetBlockingOfNonTemporaryEvents(NPC, true)
-    SetModelAsNoLongerNeeded(hash)
-    TaskStartScenarioInPlace(NPC,'WORLD_HUMAN_HANG_OUT_STREET')
+    -- local hash = `s_m_y_garbage`
+    -- NPC = CreatePed(5, hash, coords, heading, false, false)
+    -- FreezeEntityPosition(NPC, true)
+    -- SetEntityInvincible(NPC, true)
+    -- SetBlockingOfNonTemporaryEvents(NPC, true)
+    -- SetModelAsNoLongerNeeded(hash)
+    -- TaskStartScenarioInPlace(NPC,'WORLD_HUMAN_HANG_OUT_STREET')
     exports['qb-target']:AddEntityZone('NPC', NPC, {
     name="NPC",
     debugPoly=false,
