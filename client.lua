@@ -86,44 +86,44 @@ CreateThread(function()
 end)
 
 -- Spawn Boss NPC
-RegisterNetEvent('gl-garbage:spawnNPC',function(coords,heading)
-    -- local hash = `s_m_y_garbage`
-    -- NPC = CreatePed(5, hash, coords, heading, false, false)
-    -- FreezeEntityPosition(NPC, true)
-    -- SetEntityInvincible(NPC, true)
-    -- SetBlockingOfNonTemporaryEvents(NPC, true)
-    -- SetModelAsNoLongerNeeded(hash)
-    -- TaskStartScenarioInPlace(NPC,'WORLD_HUMAN_HANG_OUT_STREET')
-    exports['qb-target']:AddEntityZone('NPC', NPC, {
-    name="NPC",
-    debugPoly=false,
-    useZ = true
-    }, {
-    options = {
-        {
-            event = 'gl-garbage:getJob',
-            icon = "fas fa-clipboard",
-            label = "Start Shift",
-        },
-        {
-            event = 'gl-garbage:joinMultiJob',
-            icon = "fas fa-clipboard",
-            label = "Join A Shift",
-        },
-        {
-            event = 'gl-garbage:endJob',
-            icon = "fas fa-clipboard",
-            label = "End Shift",
-        },
-        {
-            event = 'gl-garbage:turnInVoucher',
-            icon = "fas fa-clipboard",
-            label = "Redeem Voucher",
-        },
-    },
-        distance = 2.5
-    })
-end)
+-- RegisterNetEvent('gl-garbage:spawnNPC',function(coords,heading)
+--     -- local hash = `s_m_y_garbage`
+--     -- NPC = CreatePed(5, hash, coords, heading, false, false)
+--     -- FreezeEntityPosition(NPC, true)
+--     -- SetEntityInvincible(NPC, true)
+--     -- SetBlockingOfNonTemporaryEvents(NPC, true)
+--     -- SetModelAsNoLongerNeeded(hash)
+--     -- TaskStartScenarioInPlace(NPC,'WORLD_HUMAN_HANG_OUT_STREET')
+--     exports['qb-target']:AddEntityZone('NPC', NPC, {
+--     name="NPC",
+--     debugPoly=false,
+--     useZ = true
+--     }, {
+--     options = {
+--         {
+--             event = 'gl-garbage:getJob',
+--             icon = "fas fa-clipboard",
+--             label = "Start Shift",
+--         },
+--         {
+--             event = 'gl-garbage:joinMultiJob',
+--             icon = "fas fa-clipboard",
+--             label = "Join A Shift",
+--         },
+--         {
+--             event = 'gl-garbage:endJob',
+--             icon = "fas fa-clipboard",
+--             label = "End Shift",
+--         },
+--         {
+--             event = 'gl-garbage:turnInVoucher',
+--             icon = "fas fa-clipboard",
+--             label = "Redeem Voucher",
+--         },
+--     },
+--         distance = 2.5
+--     })
+-- end)
 
 
 RegisterNetEvent('gl-garbage:turnInVoucher',function()
