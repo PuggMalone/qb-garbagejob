@@ -14,6 +14,7 @@ Config.Bins = {
     1098827230,
     897494494,
     -228596739,
+    1388308576,
 }
 
 Config.Zones = {
@@ -39,7 +40,7 @@ Config.Locations = {
     },
 }
 
-Config.TrashAmt = math.random(12, 15)
+Config.TrashAmt = 15
 
 Config.Payout = math.random(200, 300)
 
