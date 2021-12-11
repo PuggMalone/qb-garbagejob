@@ -69,20 +69,20 @@ CreateThread(function()
     BeginTextCommandSetBlipName("STRING")
     AddTextComponentString("Garbage")
     EndTextCommandSetBlipName(blip)
-    while true do
-        Wait(1000)
-        local garCoords = vector3(-321.77,-1545.84,30.02)
-        local pedCoords = GetEntityCoords(PlayerPedId())
-        local dst = #(garCoords - pedCoords)
-        if dst < 200 and npcSpawned == false then
-            TriggerEvent('gl-garbage:spawnNPC',garCoords,353.24)
-            npcSpawned = true
-        end
-        if dst >= 201  then
-            npcSpawned = false
-            DeleteEntity(NPC)
-        end
-    end
+    -- while true do
+    --     Wait(1000)
+    --     local garCoords = vector3(-321.77,-1545.84,30.02)
+    --     local pedCoords = GetEntityCoords(PlayerPedId())
+    --     local dst = #(garCoords - pedCoords)
+    --     if dst < 200 and npcSpawned == false then
+    --         TriggerEvent('gl-garbage:spawnNPC',garCoords,353.24)
+    --         npcSpawned = true
+    --     end
+    --     if dst >= 201  then
+    --         npcSpawned = false
+    --         DeleteEntity(NPC)
+    --     end
+    -- end
 end)
 
 -- Spawn Boss NPC
@@ -170,6 +170,11 @@ RegisterNetEvent('gl-garbage:getJob',function()
         missLabel = baseJob.Label
         people = 1
         QBCore.Functions.Notify("Head to " .. missLabel .. ' area and pick up ' .. Config.TrashAmt .. ' loads of trash')
+        TriggerServerEvent('qb-phone:server:sendNewMail', {
+            sender = "Garbage Manager",
+            subject = "Trash Route",
+            message = "Head to " .. missLabel .. ' area and pick up ' .. Config.TrashAmt .. ' loads of trash. Your Job ID is ' .. jobID,
+        })
         QBCore.Functions.Notify("Your Job ID is " .. jobID)
         exports['qb-target']:AddTargetModel(Config.Bins, {
             options = {
