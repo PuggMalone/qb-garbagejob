@@ -10,22 +10,26 @@ Config.Bins = {
     -206690185,
     1437508529,
     -1681329307,
+    1948359883,
+    1098827230,
+    897494494,
+    -228596739,
 }
 
 Config.Zones = {
-    [0] = {Zone = 'BEACH', Label = 'Beach', Coords = vector3(-1110.1, -1615.2, 4.36)},
-    [1] = {Zone = 'VCANA', Label = 'Vespucci Canals', Coords = vector3(-1010.42, -1122.98, 2.11)},
-    [2] = {Zone = 'DAVIS', Label = 'Grove', Coords = vector3(55.69, -1898.98, 21.67)},
-    [3] = {Zone = 'RANCHO', Label = 'Jamestown', Coords = vector3(287.37, -2007.61, 20.12)},
-    [4] = {Zone = 'EBURO', Label = 'El Burro Heights', Coords = vector3(1286.84, -1730.96, 53.03)},
-    [5] = {Zone = 'MIRR', Label = 'Mirror Park', Coords = vector3(1105.51, -543.5, 57.47)},
-    [6] = {Zone = 'RICHM', Label = 'Richman', Coords = vector3(-1942.11, 233.89, 84.51)},
-    [7] = {Zone = 'WVINE', Label = 'South Central Vinewood', Coords = vector3(-359.71, 363.21, 109.68)},
-    [8] = {Zone = 'SKID', Label = 'Around MRPD', Coords = vector3(402.9, -957.9, 29.45)},
-    [9] = {Zone = 'DELBE', Label = 'Del Perro Pier', Coords = vector3(-1613.4, -985.66, 13.02)},
-    [10] = {Zone = 'CHIL', Label = 'West Vinewood', Coords = vector3(-863.16, 706.22, 149.19)},
-    [11] = {Zone = 'DTVINE', Label = 'Clinton/Power Street', Coords = vector3(364.37, 296.42, 103.48)},
-    [12] = {Zone = 'KOREAT', Label = 'Little Seoul', Coords = vector3(-690.19, -962.13, 19.84)},
+    -- [0] = {Zone = 'BEACH', Label = 'Beach', Coords = vector3(-1110.1, -1615.2, 4.36)},
+    [0] = {Zone = 'VCANA', Label = 'Vespucci Canals', Coords = vector3(-1010.42, -1122.98, 2.11)},
+    [1] = {Zone = 'DAVIS', Label = 'Grove', Coords = vector3(55.69, -1898.98, 21.67)},
+    [2] = {Zone = 'RANCHO', Label = 'Jamestown', Coords = vector3(287.37, -2007.61, 20.12)},
+    [3] = {Zone = 'EBURO', Label = 'El Burro Heights', Coords = vector3(1286.84, -1730.96, 53.03)},
+    [4] = {Zone = 'MIRR', Label = 'Mirror Park', Coords = vector3(1105.51, -543.5, 57.47)},
+    [5] = {Zone = 'RICHM', Label = 'Richman', Coords = vector3(-1942.11, 233.89, 84.51)},
+    [6] = {Zone = 'WVINE', Label = 'South Central Vinewood', Coords = vector3(-359.71, 363.21, 109.68)},
+    [7] = {Zone = 'SKID', Label = 'Around MRPD', Coords = vector3(402.9, -957.9, 29.45)},
+    [8] = {Zone = 'DELPE', Label = 'Del Perro Pier', Coords = vector3(-1613.4, -985.66, 13.02)},
+    [9] = {Zone = 'CHIL', Label = 'West Vinewood', Coords = vector3(-863.16, 706.22, 149.19)},
+    [10] = {Zone = 'DTVINE', Label = 'Clinton/Power Street', Coords = vector3(364.37, 296.42, 103.48)},
+    [11] = {Zone = 'KOREAT', Label = 'Little Seoul', Coords = vector3(-690.19, -962.13, 19.84)},
 }
 
 Config.Locations = {
@@ -66,3 +70,5 @@ Config.VoucherList = {
         amount = 20,
     },
 }
+
+Config.materials = 5

@@ -126,23 +126,23 @@ RegisterNetEvent('gl-garbage:spawnNPC',function(coords,heading)
 end)
 
 
-RegisterNetEvent('gl-garbage:turnInVoucher',function()
-    local voucherMenu = {}
-    for k, v in pairs(Config.VoucherList) do
-        voucherMenu[#voucherMenu + 1] = {
-            header = v.label,
-            txt = "Get " .. v.amount .. " " ..  v.label,
-            params = {
-                event = 'gl-garbage:redeemMaterial',
-                args = {
-                    choice = v.databasename,
-                    amount = v.amount
-                }
-            }
-        }
-    end
-    exports['qb-menu']:openMenu(voucherMenu)
-end)
+-- RegisterNetEvent('gl-garbage:turnInVoucher',function()
+--     local voucherMenu = {}
+--     for k, v in pairs(Config.VoucherList) do
+--         voucherMenu[#voucherMenu + 1] = {
+--             header = v.label,
+--             txt = "Get " .. v.amount .. " " ..  v.label,
+--             params = {
+--                 event = 'gl-garbage:redeemMaterial',
+--                 args = {
+--                     choice = v.databasename,
+--                     amount = v.amount
+--                 }
+--             }
+--         }
+--     end
+--     exports['qb-menu']:openMenu(voucherMenu)
+-- end)
 
 RegisterNetEvent('gl-garbage:redeemMaterial',function(data)
     choice = data.choice
@@ -192,7 +192,7 @@ RegisterNetEvent('gl-garbage:getJob',function()
         SetBlipSprite(zoneBlip,9)
         SetBlipColour(zoneBlip,49)
         SetBlipAlpha(zoneBlip,75)
-        Wait(30000)
+        Wait(120000)
         RemoveBlip(zoneBlip)
     end
 end)
@@ -213,13 +213,15 @@ RegisterNetEvent('gl-garbage:cashedOut',function(ID,people)
         jobID = nil
         onJob = false
         exports['qb-target']:RemoveZone(Config.Bins)
+        RemoveBlip(zoneBlip)
         TriggerServerEvent('gl-garbage:getPaid', trashAmt, people)
         people = 1
         trashAmt = 0
-    end
-    if DoesEntityExist(vehicle) then
         DeleteEntity(vehicle)
     end
+    -- if DoesEntityExist(vehicle) then
+    --     DeleteEntity(vehicle)
+    -- end
 end)
 
 RegisterNetEvent('gl-garbage:joinMultiJob',function()
@@ -320,3 +322,4 @@ end)
 RegisterCommand('jobid', function()
     QBCore.Functions.Notify('Your job ID is ' .. jobID)
 end)
+

@@ -98,3 +98,22 @@ end)
 RegisterNetEvent('gl-garbage:jobDone', function(jobID)
     TriggerClientEvent("QBCore:Notify", source, "Finished, return to trash master", 'success')
 end)
+
+-- RegisterNetEvent("qb-metelscrap:server:scrap")
+-- AddEventHandler("qb-metelscrap:server:scrap", function()
+-- 	local src = source
+-- 	local Player = QBCore.Functions.GetPlayer(src)
+-- 	local metalscrap = "metalscrap"
+	
+-- 	if Player.Functions.GetItemByName('metalscrap') ~= nil and Player.Functions.GetItemByName('metalscrap').amount >=
+--         item then
+--         local amount = Config.materials
+--         local item = 5
+--         local price = math.random(200, 500)
+--         Player.Functions.AddMoney("cash", price, "sold-items")
+-- 		Player.Functions.RemoveItem("metalscrap")
+-- 		TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['metalscrap'], "remove")
+-- 	else
+-- 		TriggerClientEvent('QBCore:Notify', src, 'You have no metalscrap to sell..', 'error')
+-- 	end
+-- end)
