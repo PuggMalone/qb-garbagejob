@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Kallock - The Goodlife RP Server'
+author ''
 version '1.0.0'
 
 shared_script 'shared.lua'
