@@ -303,6 +303,7 @@ RegisterNetEvent('gl-garbage:depositTrashClient',function(ID)
         QBCore.Functions.Notify(trashAmt .. ' / ' .. Config.TrashAmt .. ' left')
         if trashAmt == Config.TrashAmt then
             TriggerServerEvent('gl-garbage:jobDone',jobID)
+            DeleteEntity(garbagebag)
         end
     end
 end)
