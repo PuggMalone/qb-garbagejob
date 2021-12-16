@@ -188,7 +188,7 @@ RegisterNetEvent('gl-garbage:getJob',function()
             distance = 1.0
         })
         TriggerServerEvent('gl-garbage:makeMultiJob',jobID,missZone)
-        zoneBlip = AddBlipForRadius(baseJob.Coords, 450.0)
+        zoneBlip = AddBlipForRadius(baseJob.Coords, 400.0)
         SetBlipSprite(zoneBlip,9)
         SetBlipColour(zoneBlip,49)
         SetBlipAlpha(zoneBlip,75)
@@ -274,7 +274,7 @@ RegisterNetEvent('gl-garbage:searchBin',function()
     local dumpster
 
     for i = 1, #Config.Bins do
-        dumpster = GetClosestObjectOfType(zoneCoords.x,zoneCoords.y,zoneCoords.z, 1.5, Config.Bins[i], true, false, false)
+        dumpster = GetClosestObjectOfType(zoneCoords.x,zoneCoords.y,zoneCoords.z, 0.8, Config.Bins[i], true, false, false)
         if dumpster ~= 0 then
         objId = ObjToNet(dumpster)
         TriggerServerEvent('gl-garbage:checkBin',objId)
