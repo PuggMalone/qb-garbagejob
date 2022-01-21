@@ -44,7 +44,7 @@ Config.Locations = {
 
 Config.TrashAmt = 15
 
-Config.Payout = math.random(200, 300)
+Config.Payout = math.random(200, 275)
 
 Config.VoucherList = {
     [0] = {
